@@ -1,0 +1,153 @@
+@use "variables";
+
+.app-container {
+  width: 80%;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+  background-color: variables.$base-bg-color;
+
+  &__items {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+
+.topbar {
+  height: 5rem;
+  font-size: 1.6rem;
+  background-color: variables.$bg-color;
+  color: variables.$brand-color;
+
+  &__items {
+    width: 80%;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__logo {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__brand-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.announcements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex: {
+      shrink: 1;
+      grow: 1;
+      basis: 11rem;
+    }
+    // width: 11rem;
+    height: 8.5rem;
+    background-color: variables.$bg-color;
+  }
+
+  &_m-p {
+    margin: 1.5rem 1.8rem 1.5rem 0;
+    padding: variables.$base-padding;
+  }
+
+  &_m-p:last-of-type {
+    margin: 1.5rem 0 0 0;
+    padding: variables.$base-padding;
+  }
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+
+  width: 30%;
+  background-color: variables.$base-bg-color;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$bg-color;
+  flex: {
+    basis: 14rem;
+    shrink: 1;
+    grow: 0;
+  }
+  margin-right: variables.$base-margin;
+
+  &__link {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14rem;
+    height: 2.5rem;
+    padding: variables.$base-padding;
+    transition: all 0.1s;
+    border-bottom: solid rgb(185, 185, 185) 1px;
+
+    &:link {
+      text-decoration: none;
+      color: black;
+    }
+
+    &:visited {
+      text-decoration: none;
+      color: black;
+    }
+
+    &:hover {
+      background-color: variables.$hover-color;
+    }
+
+    &:first-of-type {
+      border-radius: variables.$border-radius variables.$border-radius 0 0;
+    }
+    &:last-of-type {
+      border: none;
+      border-radius: 0 0 variables.$border-radius variables.$border-radius;
+    }
+  }
+}
+
+.user-data {
+  display: flex;
+  flex-direction: row;
+}
+
+.page-content {
+  display: flex;
+  flex: 1 1 auto;
+  background-color: variables.$bg-color;
+  border-radius: variables.$border-radius;
+}
+
+.b-radius {
+  border-radius: variables.$border-radius;
+}
+
+.border {
+  border: variables.$border;
+}
