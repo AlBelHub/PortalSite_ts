@@ -12,49 +12,60 @@ import BusinessTrip from "./routes/BusinessTrip.tsx";
 import Errands from "./routes/Errands.tsx";
 import Booking from "./routes/Booking.tsx";
 import Library from "./routes/Library.tsx";
+import Auth from "./routes/Auth.tsx";
 
 import "./styles/base.scss";
-
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Root AnnouncementOn={true} />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/main",
-        element: <MainPage />
+        path: "/",
+        element: <MainPage />,
       },
+    ],
+  },
+  {
+    element: <Root AnnouncementOn={false} />,
+    errorElement: <ErrorPage />,
+    children: [
       {
         path: "/structure",
-        element: <Structure />
+        element: <Structure />,
       },
       {
         path: "/science",
-        element: <Science />
+        element: <Science />,
       },
       {
         path: "/orders",
-        element: <Orders />
+        element: <Orders />,
       },
       {
         path: "/businessTrip",
-        element: <BusinessTrip />
+        element: <BusinessTrip />,
       },
       {
         path: "/errands",
-        element: <Errands />
+        element: <Errands />,
       },
       {
         path: "/booking",
-        element: <Booking />
+        element: <Booking />,
       },
       {
         path: "/library",
-        element: <Library />
+        element: <Library />,
       },
-    ]
+    ],
+  },
+  {
+    path: "/auth",
+    element: <Auth />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

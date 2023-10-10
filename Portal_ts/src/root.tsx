@@ -5,18 +5,24 @@ import "./styles/root.scss";
 import Announcement from "./components/Announcement";
 import Topbar from "./components/Topbar";
 
-export default function Root() {
+interface Props {
+  AnnouncementOn: boolean;
+}
+
+export default function Root({ AnnouncementOn }: Props) {
   return (
     <>
       <Topbar />
-      
+
       <div className="app-container">
-        <div className="announcements">
-          <Announcement />
-          <Announcement />
-          <Announcement />
-          <Announcement />
-        </div>
+        {AnnouncementOn && (
+          <div className="announcements">
+            <Announcement />
+            <Announcement />
+            <Announcement />
+            <Announcement />
+          </div>
+        )}
 
         <div className="app-container__items">
           <div className="sidebar b-radius">
