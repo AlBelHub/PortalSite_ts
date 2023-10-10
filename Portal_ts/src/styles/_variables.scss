@@ -1,7 +1,11 @@
 $base-bg-color: rgb(232, 232, 232);
 $bg-color: rgb(255, 255, 255);
+$bg-color-a: rgba(255, 255, 255, 0.3);
 $brand-color: rgb(0, 167, 157);
-$hover-color: rgb(156, 158, 161);
+$hover-color: rgb(228, 228, 228);
+$hover-color-a: rgba(209, 209, 209, 0.685);
+$danger-color: #ff4444;
+$danger-color-a: #ff4444a2;
 
 $border: solid 1px $brand-color;
 $border-radius: 0.4rem;
