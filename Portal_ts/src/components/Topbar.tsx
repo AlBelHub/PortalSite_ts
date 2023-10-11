@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import ProfileICON from "../assets/profile.svg";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Topbar() {
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -25,21 +26,30 @@ export default function Topbar() {
           >
             {/* <img src={ProfileICON} alt="profile" /> */}
           </div>
-          {settingsOpen && (
-            <div className="user-data__settings b-radius">
-              <Link to="/" className="settings__link b-radius">
-                Профиль
-                <div className="img"></div>
-              </Link>
-              <Link to="/" className="settings__link b-radius">
-                Темная тема
-                <button type="button" className="dark-theme settings__button" />
-              </Link>
-              <Link to="/auth" className="settings__link b-radius">
-                Выход
-              </Link>
-            </div>
-          )}
+          <AnimatePresence>
+            {settingsOpen && (
+              <motion.div className="user-data__settings b-radius"
+              initial={{opacity: 0}}
+              animate={{opacity: 1}}
+              exit={{opacity: 0}}
+              >
+                <Link to="/" className="settings__link b-radius">
+                  Профиль
+                  <div className="img"></div>
+                </Link>
+                <Link to="/" className="settings__link b-radius">
+                  Темная тема
+                  <button
+                    type="button"
+                    className="dark-theme settings__button"
+                  />
+                </Link>
+                <Link to="/auth" className="settings__link b-radius">
+                  Выход
+                </Link>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>
