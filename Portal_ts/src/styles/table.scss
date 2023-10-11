@@ -1,0 +1,27 @@
+@use "variables";
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 1px black;
+
+  &:first-of-type {
+    background-color: variables.$brand-color;
+    border-radius: 5rem;
+    border-bottom: solid 2px black;
+  }
+
+  &:nth-child(even) {
+    background-color: variables.$base-bg-color;
+  }
+}
+
+th {
+  font-size: 1.1rem;
+  text-align: justify;
+  height: 2rem;
+}

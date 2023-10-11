@@ -13,6 +13,7 @@
     justify-content: flex-start;
     flex-direction: row;
     margin: 1.5rem 0 0 0;
+    transition: all 1s;
   }
 
   @media (min-width: 1440px) {
@@ -251,8 +252,6 @@
 .page-content {
   display: flex;
   flex: 1 1 auto;
-  background-color: variables.$bg-color;
-  border-radius: variables.$border-radius;
 }
 
 .b-radius {
