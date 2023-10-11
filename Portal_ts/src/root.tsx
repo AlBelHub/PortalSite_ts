@@ -4,6 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./styles/root.scss";
 import Announcement from "./components/Announcement";
 import Topbar from "./components/Topbar";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Props {
   AnnouncementOn: boolean;
@@ -15,14 +16,24 @@ export default function Root({ AnnouncementOn }: Props) {
       <Topbar />
 
       <div className="app-container">
-        {AnnouncementOn && (
-          <div className="announcements">
-            <Announcement />
-            <Announcement />
-            <Announcement />
-            <Announcement />
-          </div>
-        )}
+        <AnimatePresence initial={false}>
+          {AnnouncementOn && (
+            <motion.div
+              className="announcements"
+              key="announcements"
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.25,
+              }}
+            >
+              <Announcement />
+              <Announcement />
+              <Announcement />
+              <Announcement />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         <div className="app-container__items">
           <div className="sidebar b-radius">
