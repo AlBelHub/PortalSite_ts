@@ -1,4 +1,4 @@
-const ExampleAnouncementData = [
+export const ExampleAnouncementData = [
   {
     id: "1",
     header: "header1",
