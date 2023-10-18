@@ -129,7 +129,6 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  background-color: variables.$bg-color;
   flex: {
     basis: 14rem;
     shrink: 1;
@@ -145,6 +144,7 @@
     width: 14rem;
     height: 2.5rem;
     padding: variables.$base-padding;
+    background-color: variables.$bg-color;
     transition: all 0.1s;
     border-bottom: solid rgb(185, 185, 185) 1px;
 
