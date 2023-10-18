@@ -1,0 +1,72 @@
+@use "variables";
+
+.booking-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.terr-container {
+}
+
+.terr-name {
+  background-color: white;
+  border-radius: variables.$border-radius;
+  margin-bottom: 0.5rem;
+  padding: variables.$base-padding;
+  font-size: 1.25rem;
+}
+
+.cabinet {
+  background-color: white;
+  border-radius: variables.$border-radius;
+  margin-bottom: 0.5rem;
+  padding: variables.$base-padding;
+  font-size: 1.25rem;
+
+  &__container {
+    display: flex;
+  }
+}
+
+.tag-button {
+  background-color: variables.$base-bg-color;
+  width: fit-content;
+  border: none;
+  font-size: 1rem;
+  padding: 0.2rem;
+  border-radius: variables.$border-radius;
+  margin-left: 1rem;
+
+  &:hover {
+    background-color: aqua;
+  }
+
+  transition: all 0.15s;
+}
+
+.eventsTEMP {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  margin-top: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+$height: 1.1rem;
+
+.active {
+  display: flex;
+  flex: 1 1;
+  height: $height;
+  background-color: rgb(231, 34, 34);
+  border-radius: variables.$border-radius;
+}
+
+.inactive {
+  display: flex;
+  flex: 1 1;
+  height: $height;
+  background-color: rgb(167, 167, 167);
+  border-radius: variables.$border-radius;
+}
