@@ -1,0 +1,56 @@
+@use 'variables';
+
+.orders-container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.order-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: variables.$bg-color;
+    border-radius: variables.$border-radius;
+}
+
+.filter-tag {
+    font-size: 0.9rem;
+    width: fit-content;
+    height: fit-content;
+    background-color: variables.$base-bg-color;
+    border-radius: variables.$border-radius;
+    padding: 0 1rem 0 1rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+
+.order {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: variables.$bg-color;
+        border-radius: variables.$border-radius;
+        padding: variables.$base-padding;
+        margin-top: 1rem;
+    }
+
+    &__text {
+        font-size: 1.2rem;
+    }
+}
+
+.filters {
+
+
+
+    &__item {
+
+    }
+}

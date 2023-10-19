@@ -45,6 +45,22 @@
   transition: all 0.15s;
 }
 
+.odin {
+  display: flexbox;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.time {
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.time-cont {
+  height: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
 .eventsTEMP {
   display: flex;
   flex: 1 1 auto;
@@ -53,20 +69,64 @@
   margin-bottom: 0.3rem;
 }
 
-$height: 1.1rem;
+$height: 1rem;
 
 .active {
   display: flex;
-  flex: 1 1;
+  position: relative;
+  flex: 1 1 auto;
   height: $height;
-  background-color: rgb(231, 34, 34);
+  background-color: #ff4444;
   border-radius: variables.$border-radius;
+
+  &:hover {
+    background-color: rgb(231, 34, 34);
+  }
 }
 
 .inactive {
   display: flex;
-  flex: 1 1;
-  height: $height;
-  background-color: rgb(167, 167, 167);
+  position: relative;
+  background-color: rgb(168, 168, 168);
   border-radius: variables.$border-radius;
+  &:hover {
+    background-color: rgb(187, 187, 187);
+  }
+}
+
+.ev-over {
+  position: absolute;
+  width: 25rem;
+  padding: variables.$base-padding;
+  background-color: white;
+  border-radius: variables.$border-radius;
+  box-shadow: 0px 20px 48px -5px rgba(13, 22, 20, 0.23);
+  z-index: 999;
+}
+
+.info {
+  margin-top: 0.5rem;
+  background-color: white;
+  &__services {
+    display: flex;
+    flex-direction: row;
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+  }
+  &__tag {
+    border-radius: variables.$border-radius;
+    font-size: 1rem;
+    text-align: center;
+    width: 2.1rem;
+    padding: {
+      left: 0.3rem;
+      right: 0.3rem;
+    }
+    margin : {
+      left: 0.3rem;
+      right: 0.3rem;
+    }
+  }
 }
