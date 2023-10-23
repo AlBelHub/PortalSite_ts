@@ -1,0 +1,75 @@
+@use "variables";
+
+.ann {
+
+
+    flex: 1 1 auto;
+
+&__content {
+
+    display: flex;
+    flex: {
+      shrink: 1;
+      grow: 1;
+      basis: auto;
+      direction: column;
+    }
+
+    h1,
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    margin-top: 1rem;
+    padding: variables.$base-padding;
+
+    border-radius: variables.$border-radius;
+
+    //Разобраться почему работает только так
+    max-width: 1rem;
+    min-width: calc(99.5% - variables.$base-padding);
+    //
+    height: 4.5rem;
+    background-color: variables.$bg-color;
+}
+
+  &_button {
+    width: fit-content;
+    min-width: 8rem;
+    height: 3rem;
+    font-size: 1.1rem;
+    background-color: aqua;
+    border: none;
+    border-radius: variables.$border-radius;
+    background-color: variables.$bg-color;
+    margin-right: 1.5rem;
+
+    &:hover {
+      background-color: variables.$hover-color;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+    transition: all 0.2s;
+  }
+}
+
+.ann-filter {
+  &__container {
+    display: flex;
+    flex: 1 1 auto;
+    height: 10rem;
+    background-color: variables.$bg-color;
+    border-radius: variables.$border-radius;
+    margin-bottom: 1rem;
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
