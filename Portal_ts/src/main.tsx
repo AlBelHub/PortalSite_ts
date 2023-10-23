@@ -13,6 +13,7 @@ import Errands from "./routes/Errands.tsx";
 import Booking from "./routes/Booking.tsx";
 import Library from "./routes/Library.tsx";
 import Auth from "./routes/Auth.tsx";
+import AllAnnouncement from "./routes/AllAnnouncements.tsx";
 
 import "./styles/base.scss";
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/errands",
         element: <Errands />,
+      },
+      {
+        path: "/announcements",
+        element: <AllAnnouncement />,
       },
       {
         path: "/booking",
