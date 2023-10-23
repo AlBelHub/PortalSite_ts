@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 
 import "./styles/root.scss";
 import Announcement from "./components/Announcement";
+import {ExampleAnouncementData} from "./tempdata/Announcements";
 import Topbar from "./components/Topbar";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,6 +12,10 @@ interface Props {
 }
 
 export default function Root({ AnnouncementOn }: Props) {
+
+  const [announcements, setAnnouncements] = useState(ExampleAnouncementData);
+
+
   return (
     <>
       <Topbar />
@@ -27,10 +32,9 @@ export default function Root({ AnnouncementOn }: Props) {
                 duration: 0.25,
               }}
             >
-              <Announcement />
-              <Announcement />
-              <Announcement />
-              <Announcement />
+              {
+                announcements.slice(-4).reverse().map(item => <Announcement id={item.id} header={item.header} content={item.content} timestamp={item.timestamp} />)
+              }
             </motion.div>
           )}
         </AnimatePresence>
@@ -45,6 +49,9 @@ export default function Root({ AnnouncementOn }: Props) {
             </Link>
             <Link to="/orders" className="sidebar__link">
               Заявки
+            </Link>
+            <Link to="/announcements" className="sidebar__link">
+              Объявления
             </Link>
             <Link to="/businessTrip" className="sidebar__link">
               Командировки
