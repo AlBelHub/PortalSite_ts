@@ -1,56 +1,130 @@
-@use 'variables';
+@use "variables";
+
+$padding-base: 0.2rem 1rem 0.2rem 1rem;
 
 .orders-container {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .order-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: variables.$bg-color;
-    border-radius: variables.$border-radius;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.5rem;
+  background-color: variables.$bg-color;
+  border-radius: variables.$border-radius;
+
+  &__text {
+    padding: $padding-base;
+    font-size: 1.5rem;
+  }
 }
 
 .filter-tag {
-    font-size: 0.9rem;
-    width: fit-content;
-    height: fit-content;
-    background-color: variables.$base-bg-color;
-    border-radius: variables.$border-radius;
-    padding: 0 1rem 0 1rem;
-    margin-left: 1rem;
-    text-align: center;
+  font-size: 0.9rem;
+  width: fit-content;
+  height: fit-content;
+  background-color: variables.$base-bg-color;
+  border-radius: variables.$border-radius;
+  padding: 0 1rem 0 1rem;
+  margin-left: 1rem;
+  text-align: center;
 }
 
 .order {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
 
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    text-align: center;
 
-    &__item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: variables.$bg-color;
-        border-radius: variables.$border-radius;
-        padding: variables.$base-padding;
-        margin-top: 1rem;
-    }
+    background-color: variables.$bg-color;
+    border-radius: variables.$border-radius;
+    padding: variables.$base-padding;
+    margin-top: 1rem;
+  }
 
-    &__text {
-        font-size: 1.2rem;
-    }
+  &__text {
+    font-size: 1.2rem;
+  }
 }
 
 .filters {
+  &__item {
+  }
+}
 
+.order-items2 {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
 
-    &__item {
+.order-item2 {
+  flex: 1 1 auto;
+  min-width: 17rem;
+  background-color: white;
+  margin-right: 2.5rem;
+  box-shadow: 0px 5px 14px 1px rgba(148, 148, 148, 0.25);
 
+  &:last-of-type {
+    margin: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: $padding-base;
+  }
+
+  &__author {
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    p {
+      font-size: 1.5rem;
     }
+  }
+
+  &__text {
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__content {
+    padding: $padding-base;
+  }
+}
+
+.order-date {
+  font-size: 1.5rem;
+}
+
+.order-number {
+  color: grey;
+  font-size: 1rem;
+}
+
+.base {
+
+    width: 400px;
+    height: 300px;
+
+    background-color: bisque;
+
 }
