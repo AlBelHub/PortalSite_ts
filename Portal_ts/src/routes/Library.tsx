@@ -20,8 +20,8 @@ export default function Library() {
               <img src="" alt="" />
               СМР
             </div>
-            <BookTable />
           </div>
+          <BookTable />
         </div>
       </div>
     </>
