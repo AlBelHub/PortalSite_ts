@@ -5,7 +5,7 @@ interface Props {
   id: string;
   header: string;
   content: string;
-  timestamp: Date;
+  timestamp: string;
 }
 
 export default function AllAnnouncementItem({
@@ -49,7 +49,7 @@ export default function AllAnnouncementItem({
                 <button onClick={(e) => handleClick(e)}>Закрыть</button>
               <h1>{header}</h1>
               <p>{content}</p>
-              <p>{timestamp.toLocaleDateString()}</p>
+              <p>{timestamp}</p>
               <p>{id}</p>
             </motion.div>
           </motion.div>
