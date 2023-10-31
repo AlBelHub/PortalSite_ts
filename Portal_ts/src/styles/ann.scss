@@ -8,6 +8,7 @@
 &__content {
 
     display: flex;
+
     flex: {
       shrink: 1;
       grow: 1;
@@ -21,6 +22,10 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
+
+    p {
+      margin-top: 0.2rem;
+    }
     
     margin-top: 1rem;
     padding: variables.$base-padding;
@@ -31,7 +36,7 @@
     max-width: 1rem;
     min-width: calc(99.5% - variables.$base-padding);
     //
-    height: 4.5rem;
+    height: 5.1rem;
     background-color: variables.$bg-color;
 }
 
